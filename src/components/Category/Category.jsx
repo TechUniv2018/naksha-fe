@@ -6,11 +6,12 @@ class Category extends React.Component {
     super(props);
     this.state = {
       preferenceValue: props.weights,
-      selected: 0,
+      selected: false,
     };
   }
 
   render() {
+    // console.log('RERENDER', this.state);
     return (
       <div className="category-main">
         <button
@@ -18,7 +19,14 @@ class Category extends React.Component {
           style={{ background: this.state.selected ? 'green' : 'white' }}
           onClick={() => {
             const newValue = !this.state.selected;
-            this.setState({ selected: newValue, preferenceValue: 0 }, () => { console.log('selected: ', this.state.selected); });
+            this.setState({ selected: newValue });
+            console.log('newValue: ', newValue);
+            console.log(this.state, 'here on click');
+            if (!newValue) {
+              this.props.modifyWeights(this.props.index, undefined);
+            } else {
+              this.props.modifyWeights(this.props.index, this.state.preferenceValue);
+            }
         }}
         >
           {this.props.name}
@@ -28,9 +36,21 @@ class Category extends React.Component {
           className="category-input"
           min="1"
           max="10"
-          value={this.state.preferenceValue}
+          // value={this.state.preferenceValue}
           style={{ background: this.state.selected ? 'white' : 'lightgrey' }}
-          onChange={(elem) => { this.setState({ preferenceValue: elem.target.value }, () => { console.log('value: ', this.state.preferenceValue); }); }}
+          onChange={(elem) => {
+            const index = this.props.index;
+            const newValue = elem.target.value;
+            this.props.modifyWeights(index, newValue);
+            this.setState({
+              preferenceValue: newValue,
+            }, () => {
+              console.log('here: ', this.state);
+              console.log('changed preferencValue: ', this.state.preferenceValue);
+            });
+
+            // console.log('weigts: ', this.props.weights);
+          }}
           disabled={!this.state.selected}
         />
       </div>
