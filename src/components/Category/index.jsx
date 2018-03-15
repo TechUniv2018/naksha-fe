@@ -16,6 +16,7 @@ class Category extends React.Component {
       <div className="category-main">
         <button
           className="category-button"
+          style={{ background: this.state.selected ? 'green' : 'white' }}
           onClick={() => {
             const newValue = !this.state.selected;
             this.setState({ selected: newValue }, () => { console.log('selected: ', this.state.selected); });
@@ -28,6 +29,7 @@ class Category extends React.Component {
           min="1"
           max="10"
           value={this.state.preferenceValue}
+          style={{ background: this.state.selected ? 'white' : 'lightgrey' }}
           onChange={(elem) => { this.setState({ preferenceValue: elem.target.value }, () => { console.log('value: ', this.state.preferenceValue); }); }}
           disabled={!this.state.selected}
         />
