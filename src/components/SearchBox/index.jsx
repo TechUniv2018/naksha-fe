@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { StandaloneSearchBox } from 'react-google-maps/lib/components/places/StandaloneSearchBox';
 // props: onPlaceChanged
@@ -29,5 +30,13 @@ class SearchBox extends React.Component {
     </div>
   );
 }
+
+SearchBox.propTypes = {
+  onPlaceChanged: PropTypes.func,
+};
+
+SearchBox.defaultProps = {
+  onPlaceChanged: () => { },
+};
 
 export default SearchBox;
