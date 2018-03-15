@@ -5,4 +5,7 @@
   font-size: 24px;
   text-overflow: ellipsis;
   width: 40%;
+  margin: 40px;
+  box-shadow: 0 0 4px;
+  border: none;
 }

@@ -7,8 +7,9 @@ const App = () => (
   <div className="App">
     <header className="App-header">
       <h1 className="App-title">NAKSHA</h1>
-      <SearchBox onPlaceChanged={console.log} />
+      <div className="App-category">Homes</div>
     </header>
+    <SearchBox onPlaceChanged={console.log} />
   </div>
 );
 
