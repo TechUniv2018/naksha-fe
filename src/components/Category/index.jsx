@@ -5,7 +5,7 @@ class Category extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      preferenceValue: 0,
+      preferenceValue: 1,
       selected: 0,
     };
   }
