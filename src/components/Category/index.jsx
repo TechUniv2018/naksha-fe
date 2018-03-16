@@ -19,7 +19,7 @@ class DisplayCategory extends React.Component {
       );
     });
     // console.log('************');
-    return (<div>{CategoryCard}</div>);
+    return (<div className="category-contentCard">{CategoryCard}</div>);
   }
 }
 

@@ -44,13 +44,15 @@ class App extends React.Component {
           data={categoryObject}
           weights={this.state.weights}
           modifyWeights={(index, newWeight) => {
-            // console.log('ModifyWeigths called with: ', index, newWeight);
-            const oldWeight = this.state.weights;
-            oldWeight[index] = newWeight;
-            this.setState({ weights: oldWeight }, () => { console.log('modify weight called: ', this.state.weights); });
-        }}
+              // console.log('ModifyWeigths called with: ', index, newWeight);
+              const oldWeight = this.state.weights;
+              oldWeight[index] = newWeight;
+              this.setState({ weights: oldWeight }, () => { console.log('modify weight called: ', this.state.weights); });
+            }}
         />
+
         <SearchButton
+          className="searchButton-main"
           onClick={() => {
           const combinedUserPreferences = preferenceCombiner(categoryObject, this.state.weights);
           const filteredPreferences = preferenceFilter(combinedUserPreferences);
