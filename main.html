@@ -167,6 +167,7 @@
         
         <br/>
         <datalist id="tickmarks">
+<option value="0" label="1">
             <option value="1" label="1">
                 <option value="2">
                     <option value="3">
@@ -182,7 +183,7 @@
 
 </datalist>
 <center>
-<div class="w3-row">
+<div class="w3-row" id="map" style="height: 800px;">
     <div class="w3-half w3-container ">
 
     <div class="w3-row">
@@ -190,7 +191,7 @@
        ATM's
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="atm" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="atm" onchange="updateinputarray()" list="tickmarks">
     </div>
 </div>
 <div class="w3-row">
@@ -198,7 +199,7 @@
         Hospitals
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="hospitals" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="hospitals" onchange="updateinputarray()" list="tickmarks">
     </div>
 </div>
 <div class="w3-row">
@@ -206,7 +207,7 @@
         Airport(s)
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="airport" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="airport" onchange="updateinputarray()" list="tickmarks">
     </div>
 </div>
 <div class="w3-row">
@@ -214,7 +215,7 @@
         Railway Station(s)
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="train_station" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="train_station" onchange="updateinputarray()" list="tickmarks">
     </div>
 </div>
 <div class="w3-row">
@@ -222,7 +223,7 @@
      Banks
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="bank" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="bank" onchange="updateinputarray()" list="tickmarks">
     </div>
 </div>
 <div class="w3-row">
@@ -230,7 +231,7 @@
         Schools
     </div>
     <div class="w3-threequarter w3-container">
-    <input type="range" min="1" max="10" value="1" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
+    <input type="range" min="0" max="10" value="0" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
     
     </div>
 </div>
@@ -241,14 +242,14 @@
                 Shopping Mall
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="shopping_mall" onchange="updateinputarray()" list="tickmarks">   </div>
+                <input type="range" min="0" max="10" value="0" class="slider" id="shopping_mall" onchange="updateinputarray()" list="tickmarks">   </div>
         </div>
         <div class="w3-row">
             <div class="w3-quarter w3-container ">
                Gym
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="gym" onchange="updateinputarray()" list="tickmarks">
+                <input type="range" min="0" max="10" value="0" class="slider" id="gym" onchange="updateinputarray()" list="tickmarks">
             </div>
         </div>
         <div class="w3-row">
@@ -256,7 +257,7 @@
                 Pharmacy
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="pharmacy" onchange="updateinputarray()" list="tickmarks">
+                <input type="range" min="0" max="10" value="0" class="slider" id="pharmacy" onchange="updateinputarray()" list="tickmarks">
             </div>
         </div>
         <div class="w3-row">
@@ -264,7 +265,7 @@
                 Movie theatre
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="movie_theatre" onchange="updateinputarray()" list="tickmarks">
+                <input type="range" min="0" max="10" value="0" class="slider" id="movie_theatre" onchange="updateinputarray()" list="tickmarks">
             </div>
         </div>
         <div class="w3-row">
@@ -272,7 +273,7 @@
                 Park
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="park" onchange="updateinputarray()" list="tickmarks">
+                <input type="range" min="0" max="10" value="0" class="slider" id="park" onchange="updateinputarray()" list="tickmarks">
             </div>
         </div>
         <div class="w3-row">
@@ -280,7 +281,7 @@
                 Schools
             </div>
             <div class="w3-threequarter w3-container">
-                <input type="range" min="1" max="10" value="1" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
+                <input type="range" min="0" max="10" value="0" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
     
             </div>
         </div>
@@ -300,7 +301,7 @@
            
            <center> <button class="w3-button w3-block w3-black" onclick="getLocation()" style="width:80%"> Magic </button></center> 
          
-              
+           
                 </div>
              
 
@@ -425,9 +426,21 @@
         (function initLocalStore() {
             ar = new Object();
             ar['atm'] = 0;
-            ar['schools'] = 0;
+            ar['school'] = 0;
             ar['bank'] = 0;
-            ar['hospitals'] = 0;
+            ar['hospital'] = 0;
+             ar['movie_theatre'] = 0;
+             ar['park'] = 0;
+            ar['convenience_store'] = 0;
+            ar['pharmacy'] = 0;
+            ar['police'] = 0;
+             ar['resturant'] = 0;
+             ar['train_station'] = 0;
+            ar['place_of_worship'] = 0;
+            ar['police'] = 0;
+             ar['shopping_mall'] = 0;
+             ar['bar'] = 0;
+            ar['gym'] = 0;
             console.log(ar);
 
         })();
@@ -511,13 +524,43 @@
                 if (status == google.maps.GeocoderStatus.OK) {
                     latitude = results[0].geometry.location.lat();
                     longitude = results[0].geometry.location.lng();
-                    alert(latitude);
+                    const userparam = [];
+
+                    for(i in ar){
+                        const val = parseFloat(ar[i]);
+                        if(val > 0){
+                        const obj ={
+                            name : i,
+                            weight: val,
+                        };
+                        userparam.push(obj);
+                        }
+                    }
+                    const reqObj ={
+                        lat: latitude,
+                        lng: longitude,
+                        preferences : userparam,
+                    };
+         fetch('http://localhost:5000/areas', {
+        method: 'post',
+        body: JSON.stringify(reqObj)
+      }).then((res) => res.json())
+      .then(obj=>{
+          console.log(latitude, longitude);
+          console.log(obj.heatmaps);
+          onSubmit(obj.heatmaps, latitude, longitude);
+      });
+
+                    //alert(latitude);
 
                 }
             });
 
         }
     </script>
+  
+    <script src="mapPlot.js"></script>
+
 </body>
 
 </html>
