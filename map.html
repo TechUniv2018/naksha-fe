@@ -159,7 +159,16 @@
                   { name: 'atm', weight: 2 }
                 ]
               })
-            })
+            }).then(res => res.json())
+                .then(json => json.heatmaps)
+                // .then(console.log)
+                .then(points => {
+                    return points.map(point => ({
+                        ...point,
+                        lat: parseFloat(point.lat),
+                        lng: parseFloat(point.lng),
+                    }))
+                });
             // return fetch('./data/response.json')
             //     .then(res => res.json())
             //     .then(json => json.heatmaps)
