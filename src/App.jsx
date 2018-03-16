@@ -8,11 +8,19 @@ const preferenceCombiner = (categories, weights) => {
   for (let i = 0; i < categories.length; i += 1) {
     const categoryElem = {
       name: categories[i],
-      weight: weights[i],
+      weights: weights[i],
     };
     returnObject.push(categoryElem);
   }
   return returnObject;
+};
+
+const preferenceFilter = (preferences) => {
+  const returnObject = [];
+  Object.keys(preferences).map((index) => {
+    if (preferences[index].weights !== undefined) { returnObject.push(preferences[index]); }
+  });
+  return preferenceFilter;
 };
 
 class App extends React.Component {
@@ -44,8 +52,9 @@ class App extends React.Component {
         />
         <SearchButton
           onClick={() => {
-          const combinedUserPreference = preferenceCombiner(categoryObject, this.state.weights);
-          console.log(combinedUserPreference);
+          const combinedUserPreferences = preferenceCombiner(categoryObject, this.state.weights);
+          const filteredPreferences = preferenceFilter(combinedUserPreferences);
+          console.log(filteredPreferences);
           // send combinedUserPreference to backend
         }}
         />

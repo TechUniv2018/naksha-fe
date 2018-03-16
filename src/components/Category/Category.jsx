@@ -20,12 +20,15 @@ class Category extends React.Component {
           onClick={() => {
             const newValue = !this.state.selected;
             this.setState({ selected: newValue });
-            console.log('newValue: ', newValue);
-            console.log(this.state, 'here on click');
+            // console.log('newValue: ', newValue);
+            // console.log(this.state, 'here on click');
             if (!newValue) {
               this.props.modifyWeights(this.props.index, undefined);
             } else {
-              this.props.modifyWeights(this.props.index, this.state.preferenceValue);
+              this.setState({
+                preferenceValue: this.state.preferenceValue || '1',
+              });
+              this.props.modifyWeights(this.props.index, this.props.weights || '1');
             }
         }}
         >
@@ -36,7 +39,7 @@ class Category extends React.Component {
           className="category-input"
           min="1"
           max="10"
-          // value={this.state.preferenceValue}
+          value={this.state.preferenceValue}
           style={{ background: this.state.selected ? 'white' : 'lightgrey' }}
           onChange={(elem) => {
             const index = this.props.index;
@@ -45,8 +48,8 @@ class Category extends React.Component {
             this.setState({
               preferenceValue: newValue,
             }, () => {
-              console.log('here: ', this.state);
-              console.log('changed preferencValue: ', this.state.preferenceValue);
+              // console.log('here: ', this.state);
+              // console.log('changed preferencValue: ', this.state.preferenceValue);
             });
 
             // console.log('weigts: ', this.props.weights);

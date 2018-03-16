@@ -18,7 +18,7 @@ class DisplayCategory extends React.Component {
       />
       );
     });
-    console.log('************');
+    // console.log('************');
     return (<div>{CategoryCard}</div>);
   }
 }
