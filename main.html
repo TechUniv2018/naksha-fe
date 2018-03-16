@@ -11,8 +11,6 @@
 </head>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
   
 <style>
     body,
@@ -89,7 +87,6 @@
 </style>
 
 <body>
-
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavbar">
@@ -118,9 +115,8 @@
 
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <!-- <img src="maps-edited.jpg" width="100%" height="2%" alt="Image here"> -->
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">NAKSHA
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity custom-css-logo">NAKSHA
         </div>
         <br/>
         <br/>
@@ -131,7 +127,6 @@
     </div>
 
     <!-- Container (About Section) -->
-
     <div class="w3-row w3-center w3-dark-grey w3-padding-16">
         <div class="w3-quarter w3-section">
             <span class="w3-xlarge">14+</span>
@@ -157,191 +152,112 @@
             <span class="w3-xxlarge w3-text-white w3-wide">HOMES</span>
         </div>
     </div>
-    <div class="w3-container w3-center">
+    <!-- <div class="w3-container w3-center">
         <input type="address" class="w3-input" placeholder="An area you are interested in" id="locationInput" onchange="updateLocationInput()"
         />
-    </div>
+    </div> -->
+    
     <div class='w3-cell-row'>
-       
-        <br/>
-        
-        <br/>
+       <br/><br/>
         <datalist id="tickmarks">
-<option value="0" label="1">
+            <option value="0">
             <option value="1" label="1">
-                <option value="2">
-                    <option value="3">
-                        <option value="4">
-                            <option value="5" label="5">
-                                <option value="6" label="50%">
-                                    <option value="7">0
-                                        <option value="8">
-                                            <option value="9">
-                                                <option value="10" label="10">
-        </div>
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5" label="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10" label="10">
+        </datalist>
+    </div>
 
-
-</datalist>
-<center>
-<div class="w3-row" id="map" style="height: 800px;">
-    <div class="w3-half w3-container ">
-
-    <div class="w3-row">
-    <div class="w3-quarter w3-container ">
-       ATM's
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="atm" onchange="updateinputarray()" list="tickmarks">
-    </div>
-</div>
-<div class="w3-row">
-    <div class="w3-quarter w3-container ">
-        Hospitals
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="hospitals" onchange="updateinputarray()" list="tickmarks">
-    </div>
-</div>
-<div class="w3-row">
-    <div class="w3-quarter w3-container ">
-        Airport(s)
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="airport" onchange="updateinputarray()" list="tickmarks">
-    </div>
-</div>
-<div class="w3-row">
-    <div class="w3-quarter w3-container ">
-        Railway Station(s)
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="train_station" onchange="updateinputarray()" list="tickmarks">
-    </div>
-</div>
-<div class="w3-row">
-    <div class="w3-quarter w3-container ">
-     Banks
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="bank" onchange="updateinputarray()" list="tickmarks">
-    </div>
-</div>
-<div class="w3-row">
-    <div class="w3-quarter w3-container ">
-        Schools
-    </div>
-    <div class="w3-threequarter w3-container">
-    <input type="range" min="0" max="10" value="0" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
-    
-    </div>
-</div>
-    </div>
-    <div class="w3-half w3-container ">
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-                Shopping Mall
+    <div class="w3-row" id="map">
+        <div class="w3-half w3-container ">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">ATM's</div>
+                <div class="w3-threequarter w3-container">
+                <input type="range" min="0" max="10" value="0" class="slider" id="atm" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
-            <div class="w3-threequarter w3-container">
-                <input type="range" min="0" max="10" value="0" class="slider" id="shopping_mall" onchange="updateinputarray()" list="tickmarks">   </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-               Gym
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Hospitals</div>
+                <div class="w3-threequarter w3-container">
+                <input type="range" min="0" max="10" value="0" class="slider" id="hospitals" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
-            <div class="w3-threequarter w3-container">
-                <input type="range" min="0" max="10" value="0" class="slider" id="gym" onchange="updateinputarray()" list="tickmarks">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Airport(s)</div>
+                <div class="w3-threequarter w3-container">
+                <input type="range" min="0" max="10" value="0" class="slider" id="airport" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-                Pharmacy
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Railway Station(s)</div>
+                <div class="w3-threequarter w3-container">
+                <input type="range" min="0" max="10" value="0" class="slider" id="train_station" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
-            <div class="w3-threequarter w3-container">
-                <input type="range" min="0" max="10" value="0" class="slider" id="pharmacy" onchange="updateinputarray()" list="tickmarks">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Banks</div>
+                <div class="w3-threequarter w3-container">
+                <input type="range" min="0" max="10" value="0" class="slider" id="bank" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-                Movie theatre
-            </div>
-            <div class="w3-threequarter w3-container">
-                <input type="range" min="0" max="10" value="0" class="slider" id="movie_theatre" onchange="updateinputarray()" list="tickmarks">
-            </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-                Park
-            </div>
-            <div class="w3-threequarter w3-container">
-                <input type="range" min="0" max="10" value="0" class="slider" id="park" onchange="updateinputarray()" list="tickmarks">
-            </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-quarter w3-container ">
-                Schools
-            </div>
-            <div class="w3-threequarter w3-container">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Schools</div>
+                <div class="w3-threequarter w3-container">
                 <input type="range" min="0" max="10" value="0" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
-    
+                
+                </div>
+            </div>
+        </div>
+        <div class="w3-half w3-container ">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Shopping Mall</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="shopping_mall" onchange="updateinputarray()" list="tickmarks">   
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Gym</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="gym" onchange="updateinputarray()" list="tickmarks">
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Pharmacy</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="pharmacy" onchange="updateinputarray()" list="tickmarks">
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Movie theatre</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="movie_theatre" onchange="updateinputarray()" list="tickmarks">
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Park</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="park" onchange="updateinputarray()" list="tickmarks">
+                </div>
+            </div>
+            <div class="w3-row">
+                <div class="w3-quarter w3-container ">Schools</div>
+                <div class="w3-threequarter w3-container">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="schools" onchange="updateinputarray()" list="tickmarks">
+                </div>
             </div>
         </div>
     </div>
-   
-    
-    
-   
-    </div>
-</center>
 
     <!-- Container (Portfolio Section) -->
     <button onclick="showdata()">Show Data </button>
     <div class="w3-content w3-container w3-padding-64" id="portfolio">
-      
-           
-           
-           <center> <button class="w3-button w3-block w3-black" onclick="getLocation()" style="width:80%"> Magic </button></center> 
-         
-           
-                </div>
-             
-
-        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-        <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-            </div>
-        </div>
-
-        <div class="w3-row-padding w3-center w3-section">
-            <div class="w3-col m3">
-                <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-            </div>
-            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-        </div>
+      <center> <button class="w3-button w3-block w3-black" onclick="getLocation()" style="width:80%"> Magic </button></center> 
     </div>
 
     <!-- Modal for full size images on click-->
@@ -362,47 +278,6 @@
         </div>
     </div>
 
-    <!-- Container (Contact Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="contact">
-        <h3 class="w3-center">WHERE I WORK</h3>
-        <p class="w3-center">
-            <em>I'd love your feedback!</em>
-        </p>
-
-        <div class="w3-row w3-padding-32 w3-section">
-            <div class="w3-col m4 w3-container">
-                <!-- Add Google Maps -->
-                <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-            </div>
-            <div class="w3-col m8 w3-panel">
-                <div class="w3-large w3-margin-bottom">
-                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US
-                    <br>
-                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515
-                    <br>
-                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com
-                    <br>
-                </div>
-                <p>Swing by for a cup of
-                    <i class="fa fa-coffee"></i>, or leave me a note:</p>
-                <form action="/action_page.php" target="_blank">
-                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                        </div>
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                        </div>
-                    </div>
-                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                    <button class="w3-button w3-black w3-right w3-section" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey">
@@ -415,9 +290,6 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-        <p>Powered by
-            <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
-        </p>
     </footer>
 
     <!-- Add Google Maps -->
