@@ -1,6 +1,7 @@
 import React from 'react';
 import DisplayCategory from './components/Category';
 import SearchButton from './components/SearchButton';
+import SearchBox from './components/SearchBox';
 import './App.css';
 
 const preferenceCombiner = (categories, weights) => {
@@ -39,7 +40,9 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">NAKSHA</h1>
+          <div className="App-category">Homes</div>
         </header>
+        <SearchBox onPlaceChanged={console.log} />
         <DisplayCategory
           data={categoryObject}
           weights={this.state.weights}
