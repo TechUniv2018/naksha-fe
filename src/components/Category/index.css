@@ -1,0 +1,6 @@
+.category-contentCard {
+  border: 2px solid black;
+  margin: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
