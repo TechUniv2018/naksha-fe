@@ -21,7 +21,7 @@ const preferenceFilter = (preferences) => {
   Object.keys(preferences).map((index) => {
     if (preferences[index].weights !== undefined) { returnObject.push(preferences[index]); }
   });
-  return preferenceFilter;
+  return returnObject;
 };
 
 class App extends React.Component {
