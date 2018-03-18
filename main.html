@@ -101,12 +101,29 @@
 
     @media only screen and (max-device-width: 1024px) {
         .bgimg-1,
-        .bgimg-4,
         .bgimg-2,
+        .bgimg-4,
+        .secondLabel,
         .bgimg-3 {
             background-attachment: scroll;
         }
-        
+    }
+
+    @media screen and (max-width: 600px) {
+        .firstLable-low { width:30%}  /* show it on small screens */
+        .firstLabel-high { width:57%; text-align: right;}
+    }
+
+    /* @media screen and (min-width: 421px) and (max-width: 1024px) {
+        .firstLabel { display: inline; }   /* hide it elsewhere */
+    /* } */
+    
+    @media screen and (min-width: 0px) and (max-width: 600px) {
+        .secondLabel { display: none; }  /* show it on small screens */
+    }
+
+    @media screen and (min-width: 701px) {
+        .secondLabel { display: block; }   /* hide it elsewhere */
     }
 </style>
 
@@ -228,6 +245,11 @@
             </center>
         </div>
         <div class="w3-half w3-container ">
+            <div class="firstLabel">
+                <span class="w3-quarter"></span>
+                <span class="w3-threequarter firstLable-low">Low</span>
+                <span class="w3-quarter firstLabel-high">High</span>
+            </div>
             <div class="w3-row">
                 <div class="w3-quarter w3-container ">ATM's</div>
                 <div class="w3-threequarter w3-container">
@@ -267,6 +289,11 @@
             </div>
         </div>
         <div class="w3-half w3-container ">
+            <div class="secondLabel">
+                <span class="w3-quarter"></span>
+                <span class="w3-threequarter">Low</span>
+                <span class="w3-quarter">High</span>
+            </div>
             <div class="w3-row">
                 <div class="w3-quarter w3-container ">Shopping Mall</div>
                 <div class="w3-threequarter w3-container">
