@@ -69,7 +69,7 @@ function onSubmit(points, lat,lng) {
                             marker.infoWindow = new google.maps.InfoWindow({
                                 content: `<h1>${advertisement.name}</h1>
                     <img src="http://www.eplans.com/house-plans/media/catalog/product/cache/2/small_image/192x144/9df78eab33525d08d6e5fb8d27136e95/d/g/dgg945-fr-ph-co_1.jpg" alt="house" />
-                    <p>${advertisement.description}</p>`,
+                    <h2>${advertisement.description}</h2>`,
                             });
                             marker.infoWindow.open(map, marker);
                         });
@@ -96,12 +96,16 @@ function onSubmit(points, lat,lng) {
             });
         });
         const data = [].concat.apply([], allData)
-        setTimeout(() => {
-            var heatmap = new google.maps.visualization.HeatmapLayer({
-                data,
-                map,
-            });
-        }, 1000);
+         heatmap = new google.maps.visualization.HeatmapLayer({
+             data,
+             map,
+         });
+        // setTimeout(() => {
+        //  heatmap = new google.maps.visualization.HeatmapLayer({
+        //         data,
+        //         map,
+        //     });
+        // }, 1000);
         
         var gradient = [
             'rgba(0, 255, 255, 0)',
