@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<head><script src="main.js"></script>
+<!-- <head><script src="main.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
@@ -110,7 +110,7 @@
                 title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
-<a href="#home" class="w3-bar-item w3-button">नक्शा</a>
+<a href="#home" class="w3-bar-item w3-button">Naksha</a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-user"></i> CONSOLE</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
@@ -137,28 +137,15 @@
         <br/>
         <br/>
         <div class="w3-display-middle" style="white-space:nowrap; width:80%; margin-top: 150px;">
-            <input type="address" class="w3-input" placeholder="An area you are interested in" id="locationInput" onchange="updateLocationInput()"
+            <input type="address" class="w3-input" placeholder="Search Area" id="locationInput" onchange="updateLocationInput()"
             />
         </div>
     </div>
 
-    <!-- Container (About Section) -->
+    <!-- Container (Home Section) -->
     <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">14+</span>
-            <br> Categories
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">25+</span>
-            <br> Partners
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">72+</span>
-            <br> Cities Covered
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">101+</span>
-            <br> Happy Clients
+        <div class="w3-center w3-section">
+            <span class="w3-xlarge">HOMES</span>
         </div>
     </div>
 
@@ -170,8 +157,8 @@
             <span class="w3-xxlarge w3-text-white w3-wide"></span>
         </div>
     </div>
-    <!-- <div class="w3-container w3-center">
-        <input type="address" class="w3-input" placeholder="An area you are interested in" id="locationInput" onchange="updateLocationInput()"
+    <!-- <div class="w3-container">
+        <input type="address" class="w3-input" placeholder="Search Area" id="locationInput" onchange="updateLocationInput()"
         />
     </div> -->
     
@@ -192,7 +179,17 @@
         </datalist>
     </div>
 <div class=w3-container id="map" style="height: 800px;"> </div>
+<br/>
+<br/>
+<center>
     <div class="w3-row" id="console">
+        <div>
+            Move the sliders towards right according to their importance
+            <br/>
+            Sliders at left most postition are not taken into account
+            <br/>
+            <br/>
+        </div>
         <div class="w3-half w3-container ">
             <div class="w3-row">
                 <div class="w3-quarter w3-container ">ATM's</div>
@@ -271,13 +268,14 @@
             </div>
         </div>
     </div>
+    </center>
 
     <!-- Container (Portfolio Section) -->
     <button onclick="showdata()" >Show Data </button>
     <div class="w3-content w3-container w3-padding-64" id="portfolio">
 <center>
     <button class="w3-button w3-block w3-black" onclick="getLocation()" id="submitBtn" style="width:80%">
-<h3> नक़्शे &nbsp; पर &nbsp;   दिखाएं</h3>
+<h3> Search</h3>
 </button>
 </center>
     </div>
@@ -296,7 +294,7 @@
     <!-- Third Parallax Image with Portfolio Text -->
     <div class="bgimg-3 w3-display-container w3-opacity-min">
         <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+            <span class="w3-xxlarge w3-text-white w3-wide">More Categories Coming Soon</span>
         </div>
     </div>
 
@@ -304,14 +302,6 @@
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey">
             <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
     </footer>
 
     <!-- Add Google Maps -->

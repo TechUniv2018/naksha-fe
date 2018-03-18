@@ -53,9 +53,6 @@ background-color: transparent;
 font-weight: 900;
 font-size: 3em;
 outline: none;
-caret-color: white;
-
-
 }
 ::placeholder{
     color:white;
