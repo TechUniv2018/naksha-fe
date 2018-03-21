@@ -75,6 +75,9 @@
                                 point.markers.push(marker);
                             });
                             // console.log(point.advertisements)
+                            if (point.advertisements === undefined) {
+                                point.advertisements = [];
+                            }
                             point.advertisements.map(advertisement => {
                                 // console.log(advertisement.lat, advertisement.lng)
                                 const marker = new google.maps.Marker({
@@ -89,8 +92,9 @@
                                 marker.addListener('click', function () {
                                     marker.infoWindow = new google.maps.InfoWindow({
                                         content: `<h1>${advertisement.name}</h1>
-                    <img src="http://www.eplans.com/house-plans/media/catalog/product/cache/2/small_image/192x144/9df78eab33525d08d6e5fb8d27136e95/d/g/dgg945-fr-ph-co_1.jpg" alt="house" />
-                    <p>${advertisement.description}</p>`,
+                                        <img width=300 src="${advertisement.img}" alt="house" />
+                                        <p>Price: ${advertisement.price} lakhs</p>
+                                        <p>${advertisement.bhk} BHK</p>`,
                                     });
                                     marker.infoWindow.open(map, marker);
                                 });
@@ -150,15 +154,15 @@
 
         function getPoints() {
             return fetch('http://localhost:5000/cached', {
-              method: 'post',
-              body: JSON.stringify({
-                lat: 12.9279,
-                lng: 77.6271,
-                preferences: [
-                  { name: 'school', weight: 1 },
-                  { name: 'atm', weight: 2 }
-                ]
-              })
+                method: 'post',
+                body: JSON.stringify({
+                    lat: 12.995534,
+                    lng: 77.685776,
+                    preferences: [
+                        { name: 'school', weight: 1 },
+                        { name: 'atm', weight: 2 }
+                    ]
+                })
             }).then(res => res.json())
                 .then(json => json.heatmaps)
                 // .then(console.log)
